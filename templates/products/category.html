@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %} 
+{% block content %}
+
+<table id="ta" >
+    <tr>
+      <th>name</th>
+      <th>desc</th>
+      <th>create_at</th>
+    </tr>
+    {% for c in category %}
+    <tr>
+      <td>{{ c.name }}</td>
+      <td>{{ c.desc }}</td>
+      <td>{{ c.create_at }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+
+
+
+{% endblock content %}
