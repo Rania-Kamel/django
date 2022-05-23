@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #b06ab3;
+  --secondary-color: #4568dc;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+body {
+  font-family: "Cairo", sans-serif !important;
+  padding: 0;
+  margin: 0;
+  background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    90deg,
+    #4568dc 0.37%,
+    #5068d8 10.78%,
+    #b06ab3 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-link {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.header-link:hover {
+  color: gainsboro;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 0 auto 60px;
+}
+/* 
+select:focus{
+    border: none;
+}
+select.lang{
+    color: #fff;
+    background: transparent;
+    border: none;
+    width: fit-content;
+    padding: 5px 3px;
+    font-weight: 600;
+
+}
+
+select.lang > option {
+    background-color: var(--primary-color);
+    width: 200px;
+    padding: 5px 3px;
+    font-weight: 600;
+
+} */
+
+/* ///////////////////////////// */
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select-selected {
+  background-color: transparent;
+  color: #fff;
+}
+
+/*style the arrow inside the select element:*/
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  transition-duration: 0.5s;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background: #fff;
+  color: var(--primary-color);
+  top: 132%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+}
+
+main {
+  margin-top: 120px;
+  padding-bottom: 120px;
+}
